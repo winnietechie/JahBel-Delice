@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+    <title>Loading...</title>
+    <style>
+        body{
+            background-color:  rgb(5, 71, 5);
+            font-family: Arimas sans-serif;
+        }   
+    /* Loaderrrr */
+    @keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.terminal-loader {
+  border: 0.3em solid #333;
+  background-color: white;
+  color: green;
+  font-family: "Arimas sans serif";
+  font-size: 2em;
+  padding: 1.5em 1em;
+  width: 12em;
+  margin: 100px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color:  green;
+}
+
+.control.minimize {
+  background-color: gray;
+}
+
+.control.maximize {
+  background-color: white;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid  green; /* Cursor */
+  animation: typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+/* loader end */
+
+    </style>
+</head>
+<body>
+    
+
+     <div id="mainContent">
+    <div class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text"><b>Loading🥧🥧🥧</b></div>
+      </div>
+</div> 
+
+    <script>
+        
+        //  setTimeout(function() {
+        //     window.location.href = localStorage.getItem('targetPage') || 'Jah-home.html'; 
+        //   }, 9000);
+
+        //   setTimeout(function() {
+        //     window.location.href = localStorage.getItem('targetPage') || 'Jah-aboutus.html'; 
+        //    }, 6000);
+
+          
+        //   setTimeout(function() {
+        //     window.location.href = localStorage.getItem('targetPage') || 'Jah-menu.html'; 
+        //    }, 6000);
+
+          
+        //    setTimeout(function() {
+        //      window.location.href = localStorage.getItem('targetPage') || 'Jah-signup.html'; 
+        //    }, 6000);
+
+          
+        //    setTimeout(function() {
+        //      window.location.href = localStorage.getItem('targetPage') || 'Jah-login.html'; 
+        //   }, 6000);
+
+        //   setTimeout(function() {
+        //      window.location.href = localStorage.getItem('targetPage') || 'Jah-contact.html'; 
+        //   }, 6000);
+
+
+          setTimeout(function() {
+            const targetPage = localStorage.getItem('targetPage');
+            window.location.href = targetPage || 'Jah-home.html'; 
+        }, 9000);
+      
+
+
+
+
+    </script>
+</body>
+</html>
